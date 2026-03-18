@@ -1,8 +1,8 @@
 resource "aws_instance" "devops_vm" {
 
-  ami           = "ami-0f65fc8c24ec8d2a1"
+  ami           = "ami-0ec10929233384c7f"
   instance_type = "t3.large"
-  key_name      = "Bastion"
+  key_name      = "cloudfront"
 
   subnet_id              = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
@@ -21,7 +21,7 @@ resource "aws_instance" "devops_vm" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("Bastion.pem")
+      private_key = file("cloudfront.pem")
       host        = self.public_ip
     }
   }
@@ -36,7 +36,7 @@ resource "aws_instance" "devops_vm" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("Bastion.pem")
+      private_key = file("cloudfront.pem")
       host        = self.public_ip
     }
   }
