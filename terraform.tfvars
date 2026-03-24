@@ -1,8 +1,8 @@
-region = "ap-northeast-1"
+region = "us-west-1"
 
-account_id = "141964413005"
+account_id = "843467041455"
 
-github_repo = "Krishnamohan2004/devops-project"
+github_repo = "Thriveni-9052/Hackthon-project"
 
 # ECR
 ecr_repository_name = "devops-app-repo"
@@ -10,7 +10,7 @@ ecr_repository_name = "devops-app-repo"
 # EKS
 eks_cluster_name = "devops-eks"
 
-eks_node_instance_types = ["t3.medium"]
+eks_node_instance_types = ["t3.large"]
 
 eks_node_desired_size = 2
 eks_node_min_size = 1
