@@ -36,3 +36,4 @@ variable "eks_node_min_size" {
 variable "eks_node_max_size" {
   description = "Maximum node count"
 }
+
